@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import os
+import time
 from move_servo import servoOne
 """
 This project is:
@@ -40,15 +41,20 @@ while cam:
 		# we must add any()/all(), meaning if anything in the array returns True,
 		# return True, or if ALL items in array return True, return True.
 		if img.any():
+		"""
+		The trigger code needs to be inserted into a separate thread, otherwise the
+		sleep() methods will cause the facial recognition algorithm to also cease.
+		"""
 			# activate the servo motor
 			trigger.moveServo()
-	# make sure servo is kept at default position
-		trigger.resetServo()
+			# return to neutral position
+			trigger.resetServo()
 
 	cv2.imshow('main window', frame)
 
 	cam, frame = camera_feed.read()
 	key = cv2.waitKey(20)
+
 	if key == 27: # exit on ESC
 		break
 
