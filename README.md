@@ -2,13 +2,13 @@
 
 An airsoft turret!
 
-multithreading under development for smooth interaction between modules
+Trigger pull and camera panning along X-axis is live.
 
 # components used
 
 servo controller
 
-servo motor
+3 servo motors
 
 raspberry pi 4
 
