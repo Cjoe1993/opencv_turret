@@ -1,8 +1,8 @@
-# opencv_turret
+# opencv_turret, currently on break until spring 2022
 
 An airsoft turret!
 
-Trigger pull and camera panning along X-axis is live.
+Trigger pull and camera panning along X-axis is live. Demo to follow upon continuation in 2022.
 
 # components used
 
